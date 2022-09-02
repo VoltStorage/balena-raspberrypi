@@ -28,6 +28,12 @@ do_deploy:append:revpi-connect() {
 	echo "dtoverlay=revpi-connect" >> ${DEPLOYDIR}/bootfiles/config.txt
 }
 
+do_deploy:append:revpi-connect-s() {
+	# Use the RevPi Connect device tree overlay
+	echo "dtoverlay=revpi-connect" >> ${DEPLOYDIR}/bootfiles/config.txt
+    # TODO: activate USB? See https://revolutionpi.com/tutorials/migration-cm4s/
+}
+
 do_deploy:append:raspberrypi3-unipi-neuron() {
 	# Use the dt overlays required by the UniPi Neuron family of boards
 	echo "dtoverlay=neuronee" >> ${DEPLOYDIR}/bootfiles/config.txt

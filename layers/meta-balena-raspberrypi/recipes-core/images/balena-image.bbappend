@@ -23,6 +23,8 @@ BALENA_BOOT_PARTITION_FILES:append:revpi-core-3 = " revpi-core-dt-blob-overlay.d
 
 BALENA_BOOT_PARTITION_FILES:append:revpi-connect = " revpi-connect-dt-blob-overlay.dtb:/dt-blob.bin"
 
+BALENA_BOOT_PARTITION_FILES:append:revpi-connect-s = " revpi-connect-dt-blob-overlay.dtb:/dt-blob.bin"
+
 python overlay_dtbs_handler () {
     # Add all the dtb files programatically
     for soc_fam in d.getVar('SOC_FAMILY', True).split(':'):
