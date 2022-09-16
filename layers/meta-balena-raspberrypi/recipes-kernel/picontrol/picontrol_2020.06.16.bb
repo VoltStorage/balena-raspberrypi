@@ -10,7 +10,7 @@ SRC_URI = " \
 	file://0002-Search-config-file-in-mnt-boot.patch \
 "
 
-SRCREV ="raspberrypi-kernel_9.20220728-5.10.120+revpi1"
+SRCREV ="raspberrypi-kernel_1%9.20220728-5.10.120+revpi1"
 
 S = "${WORKDIR}/git"
 
