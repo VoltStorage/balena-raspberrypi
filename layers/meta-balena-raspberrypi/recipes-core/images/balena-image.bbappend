@@ -11,6 +11,10 @@ SDIMG_KERNELIMAGE:raspberrypi2 ?= "kernel7.img"
 SDIMG_KERNELIMAGE:raspberrypi3-64 ?= "kernel8.img"
 SDIMG_KERNELIMAGE:raspberrypi0-2w-64 ?= "kernel8.img"
 
+# Increase Root File system size
+# ToDo (Waqar): Find correct size and fix issues
+IMAGE_ROOTFS_SIZE:revpi-connect-s ?= "2785280"
+
 # Customize balenaos-img
 BALENA_IMAGE_BOOTLOADER:rpi = "rpi-bootfiles"
 BALENA_BOOT_PARTITION_FILES:rpi = " \
