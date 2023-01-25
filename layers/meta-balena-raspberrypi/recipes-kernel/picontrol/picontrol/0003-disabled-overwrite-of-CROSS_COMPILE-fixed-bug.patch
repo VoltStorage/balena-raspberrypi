@@ -1,0 +1,22 @@
+From eeccd3c6f0e12f8bc121c1a47976547521f50a54 Mon Sep 17 00:00:00 2001
+From: Ubuntu <ubuntu@ip-172-31-32-223.eu-central-1.compute.internal>
+Date: Wed, 25 Jan 2023 10:18:36 +0000
+Subject: [PATCH] Disabled overwrite of CROSS_COMPILE, fixed bug
+
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 5daaced..4ba6973 100644
+--- a/Makefile
++++ b/Makefile
+@@ -36,7 +36,7 @@ EXTRA_CFLAGS = -I$(src)/
+ 
+ EXTRA_CFLAGS += -D__KUNBUSPI_KERNEL__
+ 
+-CROSS_COMPILE += arm-linux-gnueabihf-
++# CROSS_COMPILE += arm-linux-gnueabihf-
+ 
+ .PHONY: compiletime.h
+ 
