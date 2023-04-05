@@ -31,7 +31,10 @@ do_deploy:append:revpi-connect() {
 do_deploy:append:revpi-connect-s() {
 	# Use the RevPi Connect device tree overlay
 	echo "dtoverlay=revpi-connect" >> ${DEPLOYDIR}/bootfiles/config.txt
-    # TODO: activate USB? See https://revolutionpi.com/tutorials/migration-cm4s/
+        # Resolved TODO: USB2 controller activated (ethernet port & USB ports on the front panel are connected via this controller)
+        echo "dtoverlay=dwc2" >> ${DEPLOYDIR}/bootfiles/config.txt
+        echo "dr_mode=host" >> ${DEPLOYDIR}/bootfiles/config.txt
+
 }
 
 do_deploy:append:raspberrypi3-unipi-neuron() {
