@@ -10,8 +10,8 @@ SRC_URI = " \
 	file://0002-Search-config-file-in-mnt-boot.patch \
 "
 
-# hash for main at the time making this change
-SRCREV ="0d76e6f08a50615d15fd7a4b8482fb028cc3f18c"
+# Corresponds to tag raspberrypi-kernel_9.20200616-4.19.95+revpi1
+SRCREV ="72a58797b2eed6edab99795476108cfeec95c8d9"
 
 S = "${WORKDIR}/git"
 
